@@ -15,7 +15,7 @@ describe('/GET /products/my', () => {
 			request(app)
 				.get('/products/my')
 				.set('Authorization', token)
-				.expect(200)
+				.expect(400)
 				.expect((res) => {
 					expect(res.body.status).toBe(true);
 					expect(res.body.products.length).toBe(1);
