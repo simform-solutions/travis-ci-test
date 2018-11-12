@@ -3,3 +3,11 @@ node_js:
   - "7.2.1"
 install:
   - bash test.sh
+git:
+  quiet: true
+branches:
+  only:
+    - master
+    - develop
+services:
+  - docker
